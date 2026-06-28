@@ -1,0 +1,6 @@
+node_modules/
+workspace/agents/
+sessions/
+*.log
+openclaw-workspace-state.json
+*.sqlite*

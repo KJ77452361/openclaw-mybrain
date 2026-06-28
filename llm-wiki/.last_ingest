@@ -1,0 +1,29 @@
+{
+  "last_ingest": "2026-06-28T10:28:00+08:00",
+  "last_lint": "2026-06-27T21:30:00+08:00",
+  "articles": {
+    "生态概述": "v1.0.0",
+    "agent体系": "v1.0.0",
+    "mybrain知识库": "v1.0.0",
+    "sop体系": "v1.1.0",
+    "agent-skills": "v1.0.0",
+    "iatf16949文件控制": "v1.0.0",
+    "llm-wiki方法论": "v1.0.0"
+  },
+  "stats": {
+    "total_ingests": 3,
+    "total_articles": 7,
+    "last_scan_dirs": [
+      "MyBrain/system/",
+      "MyBrain/cards/",
+      "MyBrain/templates/",
+      "MyBrain/projects/",
+      "MyBrain/llm-wiki/raw/",
+      "~/.openclaw/agents/"
+    ],
+    "changes_this_run": 1,
+    "changes_detail": [
+      { "path": "MyBrain/system/工作板.md", "change": "minor", "effect": "系统状态刷新：Cron/Session/健康度数据更新至2026-06-28 10:25" }
+    ]
+  }
+}
