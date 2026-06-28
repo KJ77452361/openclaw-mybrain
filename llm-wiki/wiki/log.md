@@ -108,6 +108,31 @@ updated: 2026-06-27
 
 ---
 
+## [2026-06-28] ingest | Auto-Ingest: 4 changes
+
+**操作类型**：增量 Ingest（变更驱动）
+**扫描区间**：2026-06-28 10:28 → 2026-06-28 21:05
+
+**本次检测到 4 个变更**：
+
+| 来源文件 | 变更类型 | 触发的 Wiki 更新 |
+|---------|---------|----------------|
+| `system/SOP索引.md` → v4.7.0 | minor | SOP体系 → 新增 OP 运营域（2个SOP）；AG域修正为3个 |
+| `system/cron.md` → v2.2.0 | minor | SOP体系 → System Skills 表格注释补充完整 |
+| `agents/ceo/AGENTS.md` → v2.1.0 | minor | 仅内部修订，无需新建文章 |
+| `system/INDEX.md` → v5.1.0 | minor | 仅系统索引刷新，无内容变更 |
+
+**更新内容**：
+- `wiki/openclaw-ecosystem/sop体系.md` → 统计修正：AG 4→3，OP 0→2，合计 24→25；新增 OP 域说明
+- `wiki/index.md` → updated 日期确认为 2026-06-28
+
+**级联更新**：
+- `.last_ingest` → 更新时间戳
+- `log.md` → 追加本条记录
+- `daily/llm_wiki_digest_2026-06-28.md` → 生成摘要报告
+
+---
+
 ## [2026-06-28] lint | 3 issues found, 1 auto-fixed
 
 **操作类型**: Auto-Lint（每周定时质量检查）

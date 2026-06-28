@@ -3,7 +3,7 @@ title: Agent 自动标准化 SOP
 type: system
 code: AG_SOP_AUTO_001
 version: 1.0.0
-created: 2026-06-28
+updated: 2026-06-28
 owner: CEO
 status: active
 ---

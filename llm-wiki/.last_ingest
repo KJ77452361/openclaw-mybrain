@@ -1,5 +1,5 @@
 {
-  "last_ingest": "2026-06-28T10:28:00+08:00",
+  "last_ingest": "2026-06-28T21:05:00+08:00",
   "last_lint": "2026-06-28T14:39:00+08:00",
   "articles": {
     "生态概述": "v1.0.0",
@@ -11,7 +11,7 @@
     "llm-wiki方法论": "v1.0.0"
   },
   "stats": {
-    "total_ingests": 3,
+    "total_ingests": 4,
     "total_articles": 7,
     "last_scan_dirs": [
       "MyBrain/system/",
@@ -21,9 +21,12 @@
       "MyBrain/llm-wiki/raw/",
       "~/.openclaw/agents/"
     ],
-    "changes_this_run": 1,
+    "changes_this_run": 4,
     "changes_detail": [
-      { "path": "MyBrain/system/工作板.md", "change": "minor", "effect": "系统状态刷新：Cron/Session/健康度数据更新至2026-06-28 10:25" }
+      { "path": "MyBrain/system/SOP索引.md", "change": "minor", "effect": "SOP体系统计修正：AG 4→3，OP 0→2，总计 24→25" },
+      { "path": "MyBrain/system/cron.md", "change": "minor", "effect": "SOP体系 System Skills 注释补充" },
+      { "path": "MyBrain/agents/ceo/AGENTS.md", "change": "minor", "effect": "内部修订，无需新建文章" },
+      { "path": "MyBrain/system/INDEX.md", "change": "minor", "effect": "系统索引刷新，无 Wiki 内容变更" }
     ]
   }
 }

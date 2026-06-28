@@ -3,7 +3,6 @@ title: 外部工具接入评审流程SOP
 type: SOP
 code: QL_SOP_003_v1.0.0
 version: 1.0.0
-created: 2026-06-27
 updated: 2026-06-27
 tags: [SOP, external tool, security review, IATF16949]
 regulatory: IATF16949:2016 §7.5

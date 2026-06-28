@@ -3,7 +3,6 @@ title: 工作板（Workboard）使用规范
 type: SOP
 code: OP_SOP_001_v1.0.0
 version: 1.0.0
-created: 2026-06-28
 updated: 2026-06-28
 tags: [SOP, workboard, tasks, operations]
 owner: CEO

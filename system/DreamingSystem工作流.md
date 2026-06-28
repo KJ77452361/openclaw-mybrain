@@ -3,7 +3,6 @@ title: DreamingSystem工作流
 type: workflow
 code: KB_WF_004_v1.0.0
 version: 1.0.0
-created: 2026-06-27
 updated: 2026-06-27
 tags: [workflow, dreaming, self-evolution, IATF16949]
 regulatory: IATF16949:2016 §7.5

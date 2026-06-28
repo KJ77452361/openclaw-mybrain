@@ -1,3 +1,11 @@
+---
+title: Cron Job 清单
+type: system
+code: KB_SYS_CRON
+version: 2.2.0
+updated: 2026-06-28
+---
+
 # Cron Job 清单
 
 > 版本：v2.2.0

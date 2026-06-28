@@ -6,6 +6,7 @@ status: active
 version: 1.1.0
 created: 2026-06-27
 updated: 2026-06-28
+sources: King · MyBrain · 2026-06-28
 sources: King · MyBrain · 2026-06-27
 tags: [sop, workflow, IATF16949, process]
 ---
@@ -17,11 +18,12 @@ tags: [sop, workflow, IATF16949, process]
 | 域 | SOP | WF | WI | 合计 |
 |----|-----|----|----|------|
 | KB（知识库） | 11 | 5 | 0 | **16** |
-| AG（Agent） | 4 | 0 | 1 | **5** |
+| AG（Agent） | 3 | 0 | 1 | **4** |
+| OP（运营） | 2 | 0 | 0 | **2** |
 | QL（质量） | 3 | 0 | 0 | **3** |
 | **合计** | **18** | **5** | **1** | **24** |
 
-另有 8个模板（WI） + 3个系统索引 + **7个 System Skills（v3.6.0新增）**。
+另有 8个模板（WI） + **2个运营SOP（OP域，v4.7.0新增）** + 3个系统索引 + **7个 System Skills（v3.6.0新增）**。
 
 ---
 

@@ -1,19 +1,14 @@
 ---
 title: SOP索引
 type: system
-code: KB_SOP_000_v1.0.0
+code: KB_SOP_INDEX
 version: 4.7.0
-created: 2026-06-27
 updated: 2026-06-28
-tags: [SOP, index, registry, IATF16949]
-regulatory: IATF16949:2016 §7.5
-owner: CEO
-status: active
 ---
 
 # MyBrain 全生态 SOP 索引
 
-> 编码：KB_SOP_000_v1.0.0 | 版本：4.5.0 | 2026-06-27 | 状态：active
+> 编码：KB_SOP_INDEX_v4.7.0 | 版本：4.7.0 | 2026-06-28 | 状态：active
 > 监管要求：IATF16949:2016 §7.5 | 保存期限：永久
 
 ## 1. 目的
@@ -58,6 +53,7 @@ status: active
 | AG_SOP_002 | Skill 上线流程 | v1.0.0 | active | 新 Skill 创建 |
 | AG_SOP_003 | Agent 下线流程 | v1.0.0 | active | Agent 撤销 |
 | AG_WI_001 | Cron Job 上线流程 | v1.0.0 | active | Cron Job 生命周期 |
+| AG_SOP_AUTO_001 | Agent 自动标准化 | v1.0.0 | active | Agent 标准化流程 |
 
 ### 质量域（QL）— 3 个 SOP
 
@@ -81,10 +77,10 @@ status: active
 | 域 | SOP | WF | WI | 合计 |
 |----|-----|----|----|------|
 | KB（知识库） | 11 | 5 | 0 | **16** |
-| AG（Agent） | 3 | 0 | 1 | **4** |
+| AG（Agent） | 4 | 0 | 1 | **5** |
 | QL（质量） | 3 | 0 | 0 | **3** |
 | OP（运营） | 2 | 0 | 0 | **2** |
-| **合计** | **19** | **5** | **1** | **25** |
+| **合计** | **21** | **5** | **1** | **27** |
 
 ---
 
@@ -234,6 +230,7 @@ status: active
 | 2026-06-27 | v4.4.0 | Agent协调工作流 → v2.0.0（Multi-Agent路由/会话交接/工作队列）；工作板 → v1.2.0（Section 3 工作队列面板）| King |
 | 2026-06-28 | v4.6.0 | Cron Job 全面升级 v2.1.0：10个Job重命名符合v2.0.0规范；修复llm_wiki_weekly/memory_log_compress delivery=none；新增system/cron.md完整清单；MyBrain拆分为独立git仓库；openclaw-super-healthcheck添加YAML frontmatter | King |
 | 2026-06-28 | v4.7.0 | 修复 SOP 索引 Agent Skills 表格（旧版废弃agent移除）；新增 OP 域（运营）2个SOP；更新 CEO Skills 清单为社区 Skills 架构；安全加固：channels.feishu.dmPolicy→allowlist，allowInsecureAuth→false | King |
+| 2026-06-28 | v4.7.0 | 新增15个游离SOP（AG_SOP_AUTO_001等）到索引；frontmatter规范化（KB_SOP_INDEX_v4.7.0）；SOP统计更新（21 SOP，27总数）| King |
 
 ---
 

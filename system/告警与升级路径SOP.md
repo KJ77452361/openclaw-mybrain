@@ -3,7 +3,6 @@ title: 告警与升级路径SOP
 type: SOP
 code: KB_SOP_007_v1.0.0
 version: 1.0.0
-created: 2026-06-27
 updated: 2026-06-27
 tags: [SOP, alert, escalation, incident, IATF16949]
 regulatory: IATF16949:2016 §7.5

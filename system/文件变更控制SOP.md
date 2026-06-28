@@ -3,7 +3,6 @@ title: 文件变更控制SOP
 type: SOP
 code: KB_SOP_003_v1.0.0
 version: 1.0.0
-created: 2026-06-27
 updated: 2026-06-27
 tags: [SOP, document control, change management, IATF16949]
 regulatory: IATF16949:2016 §7.5.3.8

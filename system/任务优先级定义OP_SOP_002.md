@@ -3,7 +3,6 @@ title: 任务优先级定义
 type: SOP
 code: OP_SOP_002_v1.0.0
 version: 1.0.0
-created: 2026-06-28
 updated: 2026-06-28
 tags: [SOP, priority, tasks, operations]
 owner: CEO
