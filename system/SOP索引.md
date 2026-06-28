@@ -206,8 +206,8 @@ status: active
 | 2026-06-27 | v4.2.0 | 新增工作板（KB_SYS_DASHBOARD）：9个面板分区，实时状态，开放问题追踪 | King |
 | 2026-06-27 | v4.3.0 | 工作板接入自动刷新：job_dashboard_refresh（每日08:00），Cron Job 总计13个 | King |
 | 2026-06-27 | v4.4.0 | Agent协调工作流 → v2.0.0（Multi-Agent路由/会话交接/工作队列）；工作板 → v1.2.0（Section 3 工作队列面板）| King |
-| 2026-06-27 | v4.5.0 | openclaw.json v2026.6.11 升级：新增7个System Skills（browser-automation/lobster-workflow/active-memory/taskflow/usage-tracking等）；修复飞书dmPolicy P0安全漏洞；移除vp1/vp2；启用active-memory/browser/commitments等原生插件 | King |
+| 2026-06-28 | v4.6.0 | Cron Job 全面升级 v2.1.0：10个Job重命名符合v2.0.0规范；修复llm_wiki_weekly/memory_log_compress delivery=none；新增system/cron.md完整清单；MyBrain拆分为独立git仓库；openclaw-super-healthcheck添加YAML frontmatter | King |
 
 ---
 
-*version 4.5.0 · King · 2026-06-27*
+*version 4.6.0 · King · 2026-06-28*
