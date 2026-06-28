@@ -105,3 +105,30 @@ updated: 2026-06-27
 ---
 
 *v1.1.1 · King · 2026-06-28T10:28:00+08:00 · Auto-Ingest #3*
+
+---
+
+## [2026-06-28] lint | 3 issues found, 1 auto-fixed
+
+**操作类型**: Auto-Lint（每周定时质量检查）
+**检查范围**: `MyBrain/llm-wiki/wiki/`（11 articles）
+**执行者**: King (CEO) · Auto-Lint cron
+
+**确定性检查结果**:
+- ✅ 内部链接: 22条内链全部有效
+- ✅ Raw引用: 无Raw字段，无需检查
+- ✅ See Also: 全部交叉引用目标存在
+- ⚠️ Index一致性: 1 issue → 已自动修复
+
+**启发式检查结果**:
+- ⚠️ H1: sop体系.md SOP统计数据与SOP索引.md可能不一致
+- ⚠️ H2: llm-wiki/SKILL.md 缺少对 llm-wiki-automation/SKILL.md 的引用
+
+**自动修复**:
+- AF1: `wiki/index.md` → 添加 `方法/llm-wiki-automation/SKILL.md` 条目（Summary: `(no summary)`）
+
+**健康报告**: `MyBrain/daily/llm_wiki_lint_W26_2026.md`
+
+---
+
+*v1.0.0 · King · 2026-06-28T14:39+08:00 · Auto-Lint #1*

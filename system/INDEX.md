@@ -1,9 +1,9 @@
 ---
 title: MyBrain索引
 type: system
-version: 5.0.0
+version: 5.1.0
 created: 2026-06-27
-updated: 2026-06-27
+updated: 2026-06-28
 tags: [system, index]
 regulatory: IATF16949:2016 §7.5
 owner: CEO

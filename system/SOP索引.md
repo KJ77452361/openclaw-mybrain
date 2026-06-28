@@ -2,9 +2,9 @@
 title: SOP索引
 type: system
 code: KB_SOP_000_v1.0.0
-version: 4.5.0
+version: 4.7.0
 created: 2026-06-27
-updated: 2026-06-27
+updated: 2026-06-28
 tags: [SOP, index, registry, IATF16949]
 regulatory: IATF16949:2016 §7.5
 owner: CEO
@@ -67,16 +67,24 @@ status: active
 | QL_SOP_002 | 敏感信息脱敏规范 | v1.0.0 | active | 所有含敏感信息的文件 |
 | QL_SOP_003 | 外部工具接入评审流程 | v1.0.0 | active | 外部工具接入前评审 |
 
+### 运营域（OP）— 2 个 SOP
+
+| 编码 | 名称 | 版本 | 状态 | 适用范围 |
+|------|------|------|------|---------|
+| OP_SOP_001 | 工作板（Workboard）使用规范 | v1.0.0 | active | Workboard 任务管理 |
+| OP_SOP_002 | 任务优先级定义 | v1.0.0 | active | P0/P1/P2/P3 优先级标准 |
+
 ---
 
 ## 3. SOP 统计
 
 | 域 | SOP | WF | WI | 合计 |
 |----|-----|----|----|------|
-| KB（知识库） | 10 | 5 | 0 | **15** |
+| KB（知识库） | 11 | 5 | 0 | **16** |
 | AG（Agent） | 3 | 0 | 1 | **4** |
 | QL（质量） | 3 | 0 | 0 | **3** |
-| **合计** | **16** | **5** | **1** | **22** |
+| OP（运营） | 2 | 0 | 0 | **2** |
+| **合计** | **19** | **5** | **1** | **25** |
 
 ---
 
@@ -109,30 +117,48 @@ status: active
 | taskflow | v1.0.0 | OpenClaw Task Flow：持久化多步骤流程编排 |
 | usage-tracking | v1.0.0 | Usage Tracking：配额监控/Token统计/成本估算 |
 
-## 6. Agent Skills（已部署）— 14 个 + 2 个 KB Skills
+## 6. CEO Skills（已部署）— 5 个核心 + 22 个社区 Skills
 
-| Agent | Skill | 版本 | 说明 |
-|-------|-------|------|------|
-| architect | architecture-review | v1.0.0 | 架构设计与评审 |
-| qa_engineer | quality-audit | v1.0.0 | 质量审计与测试评审 |
-| fullstack_engineer | code-review | v1.0.0 | 代码评审与实现检查 |
-| pm | project-management | v1.0.0 | 项目管理与进度追踪 |
-| qm | quality-metrics | v1.0.0 | 质量指标统计与分析 |
-| ca | strategic-analysis | v1.0.0 | 战略分析与规划 |
-| he | hardware-ops | v1.0.0 | 硬件设备运维支持 |
-| se | software-design | v1.0.0 | 软件设计与建模 |
-| pe | product-requirements | v1.0.0 | 产品需求分析 |
-| llm-wiki | karpathy-llm-wiki | v1.0.0 | LLM Wiki 持久化知识库（Ingest/Query/Lint）|
-| llm-wiki | llm-wiki-automation | v1.0.0 | LLM Wiki 自动运转引擎（每日 Auto-Ingest + 每周 Auto-Lint）|
-| ceo | agent-coordinator | v1.0.0 | 多 Agent 协调 |
-| ceo | cron-manager | v1.0.0 | Cron Job 生命周期管理 |
-| ceo | knowledge-manager | v1.0.0 | 知识库维护 |
-| ceo | memory-manager | v1.0.0 | 长时记忆管理 |
-| ceo | standard-auditor | v1.0.0 | 标准化审计 |
-| KB | karpathy-llm-wiki | v1.0.0 | LLM Wiki 持久化知识库（Ingest/Query/Lint）|
-| KB | llm-wiki-automation | v1.0.0 | LLM Wiki 自动运转引擎（每日 Auto-Ingest + 每周 Auto-Lint）|
+### CEO 核心技能
 
----
+| Skill | 版本 | 说明 |
+|-------|------|------|
+| agent-coordinator | v1.0.0 | 多 Agent 协调 |
+| cron-manager | v1.0.0 | Cron Job 生命周期管理 |
+| knowledge-manager | v1.0.0 | 知识库维护 |
+| memory-manager | v1.0.0 | 长时记忆管理 |
+| standard-auditor | v1.0.0 | 标准化审计 |
+
+### 社区 Skills（ClawHub）
+
+| Skill | 来源 | 功能 |
+|-------|------|------|
+| agent-team-orchestration | arminnaimi | 多智能体团队编排 |
+| self-improving-agent | pskoett | 自我改进（错误记录+持续学习） |
+| self-improving-proactive-agent | yueyanc | 主动自我改进 |
+| memory-pipeline | openclaw | 记忆+性能系统 |
+| openclaw-super-healthcheck | openclaw | 系统健康检查 |
+| task | openclaw | 任务管理 |
+| copywriting | community | 文案写作 |
+| lead-enrichment | community | 销售线索富化 |
+| project-management-2 | community | 项目管理 |
+| ciso | community | 安全审计 |
+| productivity | community | 生产力框架 |
+| taskflow | openclaw | 多步骤任务流 |
+| clawhub | openclaw | ClawHub CLI 工具 |
+| github | openclaw | GitHub CLI |
+| gh-issues | openclaw | GitHub Issues 自动化 |
+| healthcheck | openclaw | OpenClaw 健康检查 |
+| browser-automation | openclaw | 浏览器自动化 |
+| canvas | openclaw | Canvas 渲染 |
+| spike | openclaw | 快速原型验证 |
+| weather | openclaw | 天气查询 |
+| meme-maker | openclaw | Meme 生成 |
+| diagram-maker | openclaw | 图表生成 |
+| feishu-doc | openclaw | 飞书文档 |
+| feishu-wiki | openclaw | 飞书 Wiki |
+| feishu-drive | openclaw | 飞书云盘 |
+| feishu-perm | openclaw | 飞书权限 |
 
 ## 7. 复盘 SOP 体系（完整闭环）
 
@@ -207,7 +233,8 @@ status: active
 | 2026-06-27 | v4.3.0 | 工作板接入自动刷新：job_dashboard_refresh（每日08:00），Cron Job 总计13个 | King |
 | 2026-06-27 | v4.4.0 | Agent协调工作流 → v2.0.0（Multi-Agent路由/会话交接/工作队列）；工作板 → v1.2.0（Section 3 工作队列面板）| King |
 | 2026-06-28 | v4.6.0 | Cron Job 全面升级 v2.1.0：10个Job重命名符合v2.0.0规范；修复llm_wiki_weekly/memory_log_compress delivery=none；新增system/cron.md完整清单；MyBrain拆分为独立git仓库；openclaw-super-healthcheck添加YAML frontmatter | King |
+| 2026-06-28 | v4.7.0 | 修复 SOP 索引 Agent Skills 表格（旧版废弃agent移除）；新增 OP 域（运营）2个SOP；更新 CEO Skills 清单为社区 Skills 架构；安全加固：channels.feishu.dmPolicy→allowlist，allowInsecureAuth→false | King |
 
 ---
 
-*version 4.6.0 · King · 2026-06-28*
+*version 4.7.0 · King · 2026-06-28*

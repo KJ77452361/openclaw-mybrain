@@ -28,6 +28,7 @@ updated: 2026-06-28
 | 文章 | Summary | Updated |
 |------|---------|---------|
 | [LLM Wiki 方法论](llm-wiki/wiki/方法/llm-wiki/SKILL.md) | Karpathy LLM Wiki 模式：持久化知识积累 vs RAG 临时检索 | 2026-06-27 |
+| [LLM Wiki 自动化引擎](llm-wiki/wiki/方法/llm-wiki-automation/SKILL.md) | (no summary) | 2026-06-27 |
 
 ## karpathy（来源）
 

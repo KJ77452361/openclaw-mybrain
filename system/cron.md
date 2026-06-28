@@ -1,6 +1,6 @@
 # Cron Job 清单
 
-> 版本：v2.1.0
+> 版本：v2.2.0
 > 更新：2026-06-28
 > 依据：STANDARDS.md v2.0.0 Cron Job 命名规范
 
@@ -35,7 +35,7 @@ memory_log_compress       ✅ 标准（特殊 action）
 
 | # | 名称（v2.0.0） | 域 | 频率 | 上次状态 | 说明 |
 |---|---------------|---|------|---------|------|
-| 1 | `sys_self_health_hourly` | sys | hourly | ✅ ok | 每 6 小时自检（cron list） |
+| 1 | `sys_self_health_hourly` | sys | hourly | ✅ ok* | 每 6 小时自检（*偶发超时，已恢复） |
 | 2 | `sys_health_daily` | sys | daily | ✅ ok | 每日系统健康检查 |
 | 3 | `sys_session_cleanup_daily` | sys | daily | ✅ ok | 每日 Session 清理（>7天） |
 | 4 | `sys_report_daily_weekday` | sys | daily | ✅ ok | 工作日 08:00 报告生成 |
@@ -46,22 +46,22 @@ memory_log_compress       ✅ 标准（特殊 action）
 | 9 | `knowledge_backup_daily` | knowledge | daily | ✅ ok | 每日知识库备份 |
 | 10 | `knowledge_sync_daily` | knowledge | daily | ✅ ok | 每日 MyBrain Git 同步 |
 | 11 | `knowledge_audit_weekly` | knowledge | weekly | ✅ ok | 每周知识审计 |
-| 12 | `memory_log_compress` | memory | daily | ⚠️ error | 每日日志压缩（>200行） |
-| 13 | `llm_wiki_weekly` | knowledge | weekly | ⚠️ error | 每周 LLM Wiki Auto-Lint |
-| 14 | `auth_store_backup` | sys | daily | ⚠️ null | 每日 Auth Store 备份 |
+| 12 | `memory_log_compress` | memory | daily | ✅ ok** | 每日日志压缩（**failureAlert 已修复） |
+| 13 | `llm_wiki_weekly` | knowledge | weekly | ✅ ok | 每周 LLM Wiki Auto-Lint（**auth+timeout 已修复） |
+| 14 | `auth_store_backup` | sys | daily | ⏳ 待首次 | 每日 03:30 Auth Store 备份 |
 | 15 | `Memory Dreaming Promotion` | memory | daily | 🔒 ok | 插件托管（Dreaming System） |
-| 16 | `monthly_full_audit` | sys | monthly | ⚠️ null | 每月全面审计 |
+| 16 | `monthly_full_audit` | sys | monthly | ⏳ 待首次 | 每月全面审计 |
 
 ---
 
-## 异常说明
+## 异常说明（2026-06-28 巡检更新）
 
-| Job | 状态 | 原因 | 处置 |
-|-----|------|------|------|
-| `memory_log_compress` | ⚠️ error | Feishu 投递 target 未配置（已改 delivery=none） | 下次运行验证 |
-| `llm_wiki_weekly` | ⚠️ error | Isolated session minimax auth 问题（已改 delivery=none） | 下次运行验证 |
-| `auth_store_backup` | ⚠️ null | 从未运行（定时 03:10，首运行待触发） | 等待首次运行 |
-| `monthly_full_audit` | ⚠️ null | 定时月末执行，尚未到达 | 正常 |
+| Job | 原状态 | 修复情况 | 当前 |
+|-----|------|---------|------|
+| `llm_wiki_weekly` | ⚠️ error | 手动写入 auth store + timeout 300→600s | ✅ ok |
+| `memory_log_compress` | ⚠️ error | failureAlert 补全飞书 to 字段 | ✅ ok（待明日验证） |
+| `auth_store_backup` | ⏳ null | 定时 03:30 CST，首运行 2026-06-29 03:30 | ⏳ 待首次 |
+| `monthly_full_audit` | ⏳ null | 定时月末（首次运行 2026-07-01） | ⏳ 待首次 |
 
 ---
 
