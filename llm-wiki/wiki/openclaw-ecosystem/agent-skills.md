@@ -3,34 +3,39 @@ title: Agent Skills 体系
 topic: openclaw-ecosystem
 type: article
 status: active
-version: 1.0.0
+version: 1.1.0
 created: 2026-06-27
-updated: 2026-06-27
+updated: 2026-06-29
+sources: King · MyBrain · 2026-06-29
 sources: King · MyBrain · 2026-06-27
 tags: [skill, openclaw, capability]
 ---
 
 # Agent Skills 体系
 
-## 总览（15个 Active Skills）
+## 总览（17个 Active Skills）
 
-| 域 | Agent | Skill | 编码 | 版本 |
+| 域 | Agent | Skill | 来源 | 版本 |
 |----|-------|-------|------|------|
-| **CEO** | ceo | agent-coordinator | CEO_SK_AC_001 | v1.0.0 |
-| **CEO** | ceo | cron-manager | CEO_SK_CM_001 | v1.0.0 |
-| **CEO** | ceo | knowledge-manager | CEO_SK_KM_001 | v1.0.0 |
-| **CEO** | ceo | memory-manager | CEO_SK_MM_001 | v1.0.0 |
-| **CEO** | ceo | standard-auditor | CEO_SK_SA_001 | v1.0.0 |
-| **CTO** | architect | architecture-review | AG_SK_ARCH_001 | v1.0.0 |
-| **CTO** | qa_engineer | quality-audit | AG_SK_QA_001 | v1.0.0 |
-| **CTO** | fullstack_engineer | code-review | AG_SK_FS_001 | v1.0.0 |
-| **CTO** | he | hardware-ops | AG_SK_HE_001 | v1.0.0 |
-| **CTO** | se | software-design | AG_SK_SE_001 | v1.0.0 |
-| **COO** | pm | project-management | AG_SK_PM_001 | v1.0.0 |
-| **COO** | qm | quality-metrics | AG_SK_QM_001 | v1.0.0 |
-| **CA** | ca | strategic-analysis | AG_SK_CA_001 | v1.0.0 |
-| **PE** | pe | product-requirements | AG_SK_PE_001 | v1.0.0 |
-| **KB** | llm-wiki | karpathy-llm-wiki | KB_SK_LLM_001 | v1.0.0 |
+| **CEO** | ceo | agent-coordinator | 内部 | v1.0.0 |
+| **CEO** | ceo | cron-manager | 内部 | v1.0.0 |
+| **CEO** | ceo | knowledge-manager | 内部 | v1.0.0 |
+| **CEO** | ceo | memory-manager | 内部 | v1.0.0 |
+| **CEO** | ceo | standard-auditor | 内部 | v1.0.0 |
+| **CTO** | cto | github-sync | bradvin/openclaw-github-sync | — |
+| **CTO** | cto | healthcheck | pettercc2024/openclaw-super-healthcheck | — |
+| **CTO** | he | hardware-ops | 内部 | v1.0.0 |
+| **CTO** | se | software-design | 内部 | v1.0.0 |
+| **CTO** | pe | product-requirements | 内部 | v1.0.0 |
+| **COO** | coo | project-management-2 | jk-0001 | — |
+| **COO** | coo | task | amirbrooks | — |
+| **COO** | coo | productivity | ivangdavila | — |
+| **COO** | pm | project-management | 内部 | v1.0.0 |
+| **COO** | qm | quality-metrics | 内部 | v1.0.0 |
+| **CA** | ca | ciso | ivangdavila | — |
+| **KB** | llm-wiki | karpathy-llm-wiki | 内部 | v1.0.0 |
+
+> ⚠️ v1.1.0 更新：同步 CEO/COO/CTO/CA 域 Agent AGENTS.md v2.1.0，Skills 来源更新。
 
 ---
 
@@ -82,17 +87,15 @@ metadata:
 
 ## CTO Skills（5个）
 
-### architecture-review
-**触发**：架构设计评审、技术选型决策。
-**核心**：架构模式、最佳实践、风险评估。
+### github-sync
+**来源**：bradvin/openclaw-github-sync
+**触发**：GitHub 仓库同步、备份、私有仓库创建。
+**核心**：仓库状态监控、自动化备份、PR管理。
 
-### code-review
-**触发**：代码实现检查、代码质量评估。
-**核心**：全栈代码评审、标准规范合规。
-
-### quality-audit
-**触发**：质量测试、QA流程、测试覆盖率评审。
-**核心**：测试用例评审、缺陷分析。
+### healthcheck
+**来源**：pettercc2024/openclaw-super-healthcheck
+**触发**：OpenClaw 系统深度健康检查与修复。
+**核心**：多维度健康扫描、自动修复建议。
 
 ### hardware-ops
 **触发**：硬件设备运维、硬件问题诊断。
@@ -102,15 +105,34 @@ metadata:
 **触发**：软件设计、建模、API设计。
 **核心**：设计文档、UML建模、接口规范。
 
+### product-requirements
+**触发**：产品需求分析、PRD评审、需求优先级。
+**核心**：用户故事、需求拆分、优先级评估。
+
 ---
 
-## COO Skills（2个）
+## COO Skills（4个）
 
-### project-management
+### project-management-2
+**来源**：jk-0001
+**触发**：项目管理、Eisenhower 矩阵、周/日规划 ritual、多阶段项目管理。
+**核心**：任务分解、进度追踪、风险识别。
+
+### task
+**来源**：amirbrooks
+**触发**：任务状态跟踪、跨会话任务管理、任务优先级。
+**核心**：任务生命周期、状态可视化、跨会话持久化。
+
+### productivity
+**来源**：ivangdavila
+**触发**：生产力框架、ADHD/燃烧殆尽/习惯养成等针对性方案。
+**核心**：个性化生产力提升方案。
+
+### project-management（PM）
 **触发**：项目管理、进度追踪、里程碑评审。
 **核心**：任务分解、进度报告、风险识别。
 
-### quality-metrics
+### quality-metrics（QM）
 **触发**：质量指标统计、质量趋势分析。
 **核心**：度量体系、数据采集、报告生成。
 
@@ -118,9 +140,10 @@ metadata:
 
 ## CA Skill（1个）
 
-### strategic-analysis
-**触发**：战略规划、合规评审、重大决策支持。
-**核心**：SWOT分析、风险评估、战略对齐。
+### ciso
+**来源**：ivangdavila
+**触发**：首席信息安全官框架、合规审计、风险评估、供应商安全、事件管理。
+**核心**：合规性评估、风险矩阵、安全策略。
 
 ---
 

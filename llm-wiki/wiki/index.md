@@ -4,13 +4,13 @@ type: index
 status: active
 version: 1.0.0
 created: 2026-06-27
-updated: 2026-06-28
+updated: 2026-06-29
 ---
 
 # Knowledge Base Index
 
 > LLM Wiki 全局目录。OpenClaw 全生态首次 Ingest：2026-06-27。
-> 由 LLM 在每次 ingest 后自动更新。
+> Auto-Ingest #5 · 2026-06-29。
 
 ## openclaw-ecosystem
 
@@ -19,8 +19,8 @@ updated: 2026-06-28
 | [生态概述](llm-wiki/wiki/openclaw-ecosystem/生态概述.md) | OpenClaw 多Agent自进化系统整体架构：CEO域/CTO域/COO域/CA域 | 2026-06-27 |
 | [Agent体系](llm-wiki/wiki/openclaw-ecosystem/agent体系.md) | v3.0.0 Agent层级体系：CTO域6个+COO域4个+CA域1个+撤销2个 | 2026-06-27 |
 | [MyBrain知识库](llm-wiki/wiki/openclaw-ecosystem/mybrain知识库.md) | LYT框架+IATF16949规范：四阶文件体系/27个受控文件/13张卡片/llm-wiki | 2026-06-27 |
-| [SOP与工作流体系](llm-wiki/wiki/openclaw-ecosystem/sop体系.md) | 27+7个SOP/WF/WI总览：KB域16个+AG域5个+QL域3个+System Skills 7个+复盘三层闭环 | 2026-06-28 |
-| [Agent Skills](llm-wiki/wiki/openclaw-ecosystem/agent-skills.md) | 15个Active Skills：CEO5个+CTO5个+COO2个+CA1个+PE1个+KB1个 | 2026-06-27 |
+| [SOP与工作流体系](llm-wiki/wiki/openclaw-ecosystem/sop体系.md) | 27+7个SOP/WF/WI总览：KB域16个+AG域4个+OP域2个+QL域3个+System Skills 7个+19个Cron Job | 2026-06-29 |
+| [Agent Skills](llm-wiki/wiki/openclaw-ecosystem/agent-skills.md) | 17个Active Skills：CEO5个+CTO5个+COO4个+CA1个+KB1个，含ClawHub来源 | 2026-06-29 |
 | [IATF16949文件控制](llm-wiki/wiki/openclaw-ecosystem/iatf16949文件控制.md) | 四阶分层/三态管理/三级变更/六阶段流程/脱敏规则 | 2026-06-27 |
 
 ## 方法
@@ -38,4 +38,4 @@ updated: 2026-06-28
 
 ---
 
-*v1.0.0 · King · 2026-06-28 · Auto-Ingest #4*
+*v1.0.0 · King · 2026-06-29 · Auto-Ingest #5*

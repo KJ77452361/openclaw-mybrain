@@ -2,15 +2,15 @@
 title: Cron Job 清单
 type: system
 code: KB_SYS_CRON
-version: 2.2.0
-updated: 2026-06-28
+version: 2.3.0
+updated: 2026-06-29
 ---
 
 # Cron Job 清单
 
-> 版本：v2.2.0
-> 更新：2026-06-28
-> 依据：STANDARDS.md v2.0.0 Cron Job 命名规范
+> 版本：v2.3.0
+> 更新：2026-06-29
+> 依据：STANDARDS.md v1.4.0 Cron Job 命名规范
 
 ---
 
@@ -18,80 +18,58 @@ updated: 2026-06-28
 
 ```
 {domain}_{action}_{frequency}
-  domain:     sys | knowledge | agent | channel | quality | memory
-  action:     health | backup | sync | cleanup | check | audit | report | dreaming
-  frequency:  daily | hourly | weekly | monthly
+  domain:     sys | knowledge | quality | llm
+  frequency:  hourly | daily | weekly | monthly
 
 示例：
 sys_health_daily          ✅ 标准
 knowledge_backup_daily    ✅ 标准
 sys_session_cleanup_daily ✅ 标准
 quality_check_weekly      ✅ 标准
-memory_log_compress       ✅ 标准（特殊 action）
 ```
 
 **状态标识**
 | 标识 | 含义 |
 |------|------|
 | ✅ | 符合 v2.0.0 规范 |
-| 🔒 | 插件托管，名称不可修改 |
-| ⚠️ | 历史遗留，暂保留（避免丢失运行历史） |
+| 🔒 | 插件托管，名称由插件控制，不可手动修改 |
+| ⚠️ | 历史遗留，暂保留 |
+| ⏳ | 已禁用或新建未运行 |
 
 ---
 
-## 全部 Job 清单（v2.1.0）
+## 全部 Job 清单（v2.3.0 · 共 19 个 · 活跃 18 个 · 禁用 1 个）
 
-| # | 名称（v2.0.0） | 域 | 频率 | 上次状态 | 说明 |
-|---|---------------|---|------|---------|------|
-| 1 | `sys_self_health_hourly` | sys | hourly | ✅ ok* | 每 6 小时自检（*偶发超时，已恢复） |
-| 2 | `sys_health_daily` | sys | daily | ✅ ok | 每日系统健康检查 |
-| 3 | `sys_session_cleanup_daily` | sys | daily | ✅ ok | 每日 Session 清理（>7天） |
-| 4 | `sys_report_daily_weekday` | sys | daily | ✅ ok | 工作日 08:00 报告生成 |
-| 5 | `sys_dashboard_refresh_daily` | sys | daily | ✅ ok | 每日 08:00 工作板刷新 |
-| 6 | `sys_audit_weekly` | sys | weekly | ✅ ok | 每周一 08:00 标准化审计 |
-| 7 | `quality_check_weekly` | quality | weekly | ✅ ok | 每周质量检查 |
-| 8 | `knowledge_llm_wiki_daily` | knowledge | daily | ✅ ok | 每日 21:00 LLM Wiki Auto-Ingest |
-| 9 | `knowledge_backup_daily` | knowledge | daily | ✅ ok | 每日知识库备份 |
-| 10 | `knowledge_sync_daily` | knowledge | daily | ✅ ok | 每日 MyBrain Git 同步 |
-| 11 | `knowledge_audit_weekly` | knowledge | weekly | ✅ ok | 每周知识审计 |
-| 12 | `memory_log_compress` | memory | daily | ✅ ok** | 每日日志压缩（**failureAlert 已修复） |
-| 13 | `llm_wiki_weekly` | knowledge | weekly | ✅ ok | 每周 LLM Wiki Auto-Lint（**auth+timeout 已修复） |
-| 14 | `auth_store_backup` | sys | daily | ⏳ 待首次 | 每日 03:30 Auth Store 备份 |
-| 15 | `Memory Dreaming Promotion` | memory | daily | 🔒 ok | 插件托管（Dreaming System） |
-| 16 | `monthly_full_audit` | sys | monthly | ⏳ 待首次 | 每月全面审计 |
-
----
-
-## 异常说明（2026-06-28 巡检更新）
-
-| Job | 原状态 | 修复情况 | 当前 |
-|-----|------|---------|------|
-| `llm_wiki_weekly` | ⚠️ error | 手动写入 auth store + timeout 300→600s | ✅ ok |
-| `memory_log_compress` | ⚠️ error | failureAlert 补全飞书 to 字段 | ✅ ok（待明日验证） |
-| `auth_store_backup` | ⏳ null | 定时 03:30 CST，首运行 2026-06-29 03:30 | ⏳ 待首次 |
-| `monthly_full_audit` | ⏳ null | 定时月末（首次运行 2026-07-01） | ⏳ 待首次 |
+| # | 名称 | 域 | 频率 | 调度（CST） | 上次状态 | 说明 |
+|---|------|----|------|-----------|---------|------|
+| 1 | `sys_self_health_hourly` | sys | hourly | 每6h | ✅ ok | 每6小时自检 |
+| 2 | `knowledge_wiki_daily` | knowledge | daily | 06:00 | ✅ ok | 每日 Wiki 同步 |
+| 3 | `sys_session_cleanup_daily` | sys | daily | 02:00 | ⏳ null | 每日 Session 清理 |
+| 4 | `knowledge_backup_daily` | knowledge | daily | 03:00 | ✅ ok | 每日知识库备份 |
+| 5 | `Memory Dreaming Promotion` | — | daily | 03:00 | 🔒 ok | 插件托管（memory-core） |
+| 6 | `Memory_Dreaming_Promotion` | — | daily | 03:00 | ⛔ 已禁用 | 与插件版重复，用户创建，已禁用 |
+| 7 | `sys_memory_compress_daily` | sys | daily | 03:00 | ✅ ok | 每日记忆压缩 |
+| 8 | `sys_auth_backup_daily` | sys | daily | 03:30 | ✅ ok | 每日 Auth Store 备份 |
+| 9 | `knowledge_sync_daily` | knowledge | daily | 06:00 | ✅ ok | 每日 MyBrain Git 同步 |
+| 10 | `sys_report_daily_weekday` | sys | daily | 08:00（工作日）| ✅ ok | 工作日早报告 |
+| 11 | `sys_dashboard_refresh_daily` | sys | daily | 08:00 | ✅ ok | 每日工作板刷新 |
+| 12 | `sys_health_daily` | sys | daily | 09:00 | ✅ ok | 每日健康检查 |
+| 13 | `sys_audit_monthly` | sys | monthly | 月末21:00 | ⏳ null | 月末全面审计 |
+| 14 | `quality_check_weekly` | quality | weekly | 周三08:00 | ⏳ null | 每周质量检查 |
+| 15 | `llm_wiki_weekly` | llm | weekly | 周五18:00 | ✅ ok | 每周 LLM Wiki Lint |
+| 16 | `sys_workboard_archive_weekly` | sys | weekly | 周日03:00 | ⏳ null | 每周工作板归档 |
+| 17 | `sys_tasks_maintenance_weekly` | sys | weekly | 周一02:00 | ✅ ok | 每周任务维护 |
+| 18 | `sys_audit_weekly` | sys | weekly | 周一08:00 | ✅ ok | 每周标准化审计 |
+| 19 | `knowledge_audit_weekly` | knowledge | weekly | 周一08:00 | ⚠️ error | 审计超时→已修复600s |
 
 ---
 
-## Cron Expression 参考（Asia/Shanghai）
+## 异常追踪
 
-| Job | Expression | 运行时间 |
-|-----|-----------|---------|
-| `sys_self_health_hourly` | `0 */6 * * *` | 每 6 小时（stagger 5min） |
-| `sys_health_daily` | `0 6 * * *` | 每日 06:00 |
-| `sys_session_cleanup_daily` | `0 2 * * *` | 每日 02:00 |
-| `sys_report_daily_weekday` | `0 8 * * 1-5` | 工作日 08:00 |
-| `sys_dashboard_refresh_daily` | `0 8 * * *` | 每日 08:00 |
-| `sys_audit_weekly` | `0 8 * * 1` | 每周一 08:00 |
-| `quality_check_weekly` | `0 21 * * 0` | 每周日 21:00 |
-| `knowledge_llm_wiki_daily` | `0 21 * * *` | 每日 21:00 |
-| `knowledge_backup_daily` | `0 3 * * *` | 每日 03:00 |
-| `knowledge_sync_daily` | `0 6 * * *` | 每日 06:00 |
-| `knowledge_audit_weekly` | `0 22 * * 0` | 每周日 22:00 |
-| `memory_log_compress` | `0 3 * * *` | 每日 03:00 |
-| `llm_wiki_weekly` | `0 18 * * 5` | 每周五 18:00 |
-| `auth_store_backup` | `0 3 1,15 * *` | 每月 1/15 日 03:00 |
-| `monthly_full_audit` | `0 8 28 * *` | 每月 28 日 08:00 |
+| Job | 问题 | 修复 | 状态 |
+|-----|------|------|------|
+| `knowledge_audit_weekly` | 连续4次 timeout（300s不够）| timeout→600s | ⏳ 下次运行验证 |
+| `Memory_Dreaming_Promotion` | 与插件版重复 | 已禁用 | ✅ |
 
 ---
 
@@ -100,7 +78,9 @@ memory_log_compress       ✅ 标准（特殊 action）
 | 日期 | 版本 | 变更 |
 |------|------|------|
 | 2026-06-27 | v1.0.0 | 初始建立，16 个 Job |
-| 2026-06-28 | v2.0.0 | delivery.mode 修复（llm_wiki_weekly / memory_log_compress → none） |
-| 2026-06-28 | v2.1.0 | 命名全面升级 v2.0.0（10 个 job 重命名）+ 创建本文件 |
+| 2026-06-28 | v2.0.0 | delivery.mode 修复 |
+| 2026-06-28 | v2.1.0 | 命名全面升级 v2.0.0 |
+| 2026-06-29 | v2.2.0 | 新增 job 命名修正 |
+| 2026-06-29 | v2.3.0 | Dreaming 重复处理 + 18 jobs 全面对齐 |
 
-*King · 2026-06-28*
+*King · 2026-06-29*

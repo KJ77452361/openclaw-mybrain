@@ -1,17 +1,17 @@
 {
-  "last_ingest": "2026-06-28T21:05:00+08:00",
+  "last_ingest": "2026-06-29T21:03:00+08:00",
   "last_lint": "2026-06-28T14:39:00+08:00",
   "articles": {
     "生态概述": "v1.0.0",
     "agent体系": "v1.0.0",
     "mybrain知识库": "v1.0.0",
-    "sop体系": "v1.1.0",
-    "agent-skills": "v1.0.0",
+    "sop体系": "v1.2.0",
+    "agent-skills": "v1.1.0",
     "iatf16949文件控制": "v1.0.0",
     "llm-wiki方法论": "v1.0.0"
   },
   "stats": {
-    "total_ingests": 4,
+    "total_ingests": 5,
     "total_articles": 7,
     "last_scan_dirs": [
       "MyBrain/system/",
@@ -21,12 +21,10 @@
       "MyBrain/llm-wiki/raw/",
       "~/.openclaw/agents/"
     ],
-    "changes_this_run": 4,
+    "changes_this_run": 2,
     "changes_detail": [
-      { "path": "MyBrain/system/SOP索引.md", "change": "minor", "effect": "SOP体系统计修正：AG 4→3，OP 0→2，总计 24→25" },
-      { "path": "MyBrain/system/cron.md", "change": "minor", "effect": "SOP体系 System Skills 注释补充" },
-      { "path": "MyBrain/agents/ceo/AGENTS.md", "change": "minor", "effect": "内部修订，无需新建文章" },
-      { "path": "MyBrain/system/INDEX.md", "change": "minor", "effect": "系统索引刷新，无 Wiki 内容变更" }
+      { "path": "MyBrain/system/cron.md", "change": "minor", "effect": "SOP体系 v1.2.0：新增 Cron Job 体系章节（19 jobs）；Dreaming 重复处理解决" },
+      { "path": "MyBrain/agents/{coo,cto,ca,pm,qm,rs,sa,pe,he,se}/AGENTS.md", "change": "minor", "effect": "Agent Skills v1.1.0：同步 ClawHub 来源，15→17个 Skills" }
     ]
   }
 }

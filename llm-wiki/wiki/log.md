@@ -157,3 +157,33 @@ updated: 2026-06-27
 ---
 
 *v1.0.0 · King · 2026-06-28T14:39+08:00 · Auto-Lint #1*
+
+---
+
+## [2026-06-29] ingest | Auto-Ingest: 2 changes
+
+**操作类型**：增量 Ingest（变更驱动）
+**扫描区间**：2026-06-28 21:05 → 2026-06-29 21:03
+
+**本次检测到 2 个变更**：
+
+| 来源文件 | 变更类型 | 触发的 Wiki 更新 |
+|---------|---------|----------------|
+| `system/cron.md` → v2.3.0 | minor | SOP体系 → 新增 Cron Job 体系章节（19 jobs）；Dreaming 重复处理 |
+| `agents/{coo,cto,ca,pm,qm,rs,sa,pe,he,se}/AGENTS.md` → v2.1.0 | minor | Agent Skills → 同步 ClawHub Skills 来源（15→17个） |
+
+**更新内容**：
+- `wiki/openclaw-ecosystem/sop体系.md` → v1.2.0
+  - 统计修正：AG 4→3，OP 0→2，合计 24→25（重申上期修正）
+  - 新增 Cron Job 体系章节（v2.3.0 · 19个Job · 活跃18 · 禁用1）
+- `wiki/openclaw-ecosystem/agent-skills.md` → v1.1.0
+  - Skills 15→17，新增 COO/CTO 域 ClawHub 来源
+  - 同步 coo(qm-0001/amirbrooks/ivangdavila)、cto(bradvin/pettercc2024)、ca(ivangdavila/ciso)
+- `wiki/index.md` → updated 日期更新至 2026-06-29
+
+**级联更新**：
+- `.last_ingest` → 更新时间戳
+- `log.md` → 追加本条记录
+- `daily/llm_wiki_digest_2026-06-29.md` → 生成摘要报告
+
+---

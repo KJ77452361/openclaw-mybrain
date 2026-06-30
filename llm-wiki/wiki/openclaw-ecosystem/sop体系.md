@@ -3,9 +3,10 @@ title: SOP 与工作流体系
 topic: openclaw-ecosystem
 type: article
 status: active
-version: 1.1.0
+version: 1.2.0
 created: 2026-06-27
-updated: 2026-06-28
+updated: 2026-06-29
+sources: King · MyBrain · 2026-06-29
 sources: King · MyBrain · 2026-06-28
 sources: King · MyBrain · 2026-06-27
 tags: [sop, workflow, IATF16949, process]
@@ -21,9 +22,11 @@ tags: [sop, workflow, IATF16949, process]
 | AG（Agent） | 3 | 0 | 1 | **4** |
 | OP（运营） | 2 | 0 | 0 | **2** |
 | QL（质量） | 3 | 0 | 0 | **3** |
-| **合计** | **18** | **5** | **1** | **24** |
+| **合计** | **19** | **5** | **1** | **25** |
 
-另有 8个模板（WI） + **2个运营SOP（OP域，v4.7.0新增）** + 3个系统索引 + **7个 System Skills（v3.6.0新增）**。
+另有 8个模板（WI） + 3个系统索引 + **7个 System Skills（v3.6.0新增）**。
+
+> ⚠️ v1.2.0 更新：OP域 SOP 统计修正（原 24 → 25），依据 cron.md v2.3.0。
 
 ---
 
@@ -60,8 +63,6 @@ tags: [sop, workflow, IATF16949, process]
 | 编码 | 名称 | 核心内容 |
 |------|------|---------|
 | **AG_SOP_001** | **Agent 自动标准化 SOP** | 新建 Agent 自动符合 v2.0.0 标准：8个必填文件/SOUL≥10行/自动检查清单 |
-
-> 来源：2026-06-28 新增，v1.0.0，CEO
 
 ---
 
@@ -113,6 +114,20 @@ tags: [sop, workflow, IATF16949, process]
 | usage-tracking | Usage Tracking：配额监控/Token统计/成本估算 |
 
 > **Auto-Ingest 引擎**：本每日 ingest 即为 llm-wiki-automation Skill 的核心能力，驱动全生态知识向 wiki 的自动化沉淀。
+
+---
+
+## Cron Job 体系（v2.3.0 · 共 19 个 · 活跃 18 个 · 禁用 1 个）
+
+| 域 | 频率 | Job 数 | 代表 Job |
+|---|---|---|---|
+| sys | hourly+daily+weekly+monthly | 10 | sys_health_hourly, sys_audit_weekly |
+| knowledge | daily+weekly | 4 | knowledge_wiki_daily, knowledge_sync_daily |
+| llm | weekly | 1 | llm_wiki_weekly |
+| quality | weekly | 1 | quality_check_weekly |
+| 插件托管 | daily | 1 | Memory Dreaming Promotion（🔒）|
+
+> ⚠️ 已知问题：`knowledge_audit_weekly` 曾连续4次 timeout（300s不够）→ 已修复 timeout→600s，待下次运行验证。
 
 ---
 
